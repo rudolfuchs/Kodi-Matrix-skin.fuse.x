@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon provider-name="Skuf" name="FuseX" version="1.0.6" id="skin.fuse.x">
+    <requires>
+    </requires>
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="1">
+       <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+       <summary lang="en_gb">Soft gradients, pixel highlights and visible fanart</summary>
+       <description lang="en_gb">FuseX is a very clean looking skin with horizontal style top menu which utilises low list viewtypes throughout the skin in order to showcase fanart. The home menu bar is accessible from anywhere by pressing up, minimising the need to ever "go home".</description>
+       <platform>all</platform>
+       <license>Creative Commons Non Commercial 3.0 License</license>
+       <assets>
+          <icon>icon.png</icon>
+          <fanart>fanart.jpg</fanart>
+       </assets>                                                                                                                           
+    </extension> 
+</addon>

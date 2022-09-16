@@ -1,0 +1,2 @@
+die strings.po ist eine deiusche ubersetzung
+were schön in skin die sprach auswahl hinzuzufügen

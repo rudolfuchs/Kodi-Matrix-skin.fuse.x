@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="4">
+    <defaultcontrol always="true">9100</defaultcontrol>
+
+    <controls>
+		            <include>Dialog_Settings_Panel</include>
+
+        <include>Global_Background_Settings</include>
+        <control type="image">
+            <top>0</top>
+            <height>1080</height>
+            <width>1920</width>
+
+            <texture border="16" colordiffuse="panel_bg">common/rounded-shadow8.png</texture>
+
+        </control>
+        <control type="group">
+            <left>200</left>
+            <width>2000</width>
+            <top>PosterPad</top>
+            <height>1080</height>
+			<align>center</align>
+
+            <control type="Panel" id="9100">
+
+
+            <viewtype label="$LOCALIZE[31263]">icon</viewtype>
+
+            <focusposition>2</focusposition>
+            <movement>3</movement>
+            <description>Plugin Content Widget</description>
+            <width>1700</width>
+            <left>0</left>
+            <top>0</top>
+            <bottom>0</bottom>
+            <onleft>$PARAM[id]</onleft>
+            <onright>$PARAM[id]</onright>
+
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Horizontal</include>
+            <preloaditems>2</preloaditems>
+            <orientation>vertical</orientation>
+            <pagecontrol>60</pagecontrol>
+            <onfocus>SetProperty(ViewType,Square,Home)</onfocus>
+            <scrolltime tween="quadratic">400</scrolltime>
+            <itemlayout width="300" height="300" >
+
+
+				
+	                <control type="image">
+                    <bordersize>10</bordersize>
+                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture colordiffuse="main_bg_70">common/white.png</texture>
+                </control>
+                    <control type="image">
+                        <bordersize>10</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="PosterBack">common/white.png</texture>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$VAR[Label_SquareTitle]</label>
+                </control>
+
+            </itemlayout>
+            <focusedlayout width="300" height="300">
+
+                <control type="image">
+                    <bordersize>10</bordersize>
+                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture colordiffuse="main_bg_70">common/white.png</texture>
+                </control>
+
+                <!-- Parent Folder -->
+                <control type="group">
+                   
+                    <control type="image">
+                        <bordersize>10</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+
+
+				</control>
+				
+				
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="PosterBack">common/white.png</texture>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$VAR[Label_SquareTitle]</label>
+                </control>
+
+                
+                <!-- Highlight -->
+                <control type="group">
+                   >
+                    <animation type="Focus">
+                        <effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
+                        <effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
+                    </animation>
+                    <animation type="Unfocus">
+                        <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="auto" />
+                        <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
+                    </animation>
+                    <include>View_WatchedOverlay_Focus</include>
+                    <control type="image">
+                        <left>3</left>
+                        <top>3</top>
+                        <right>3</right>
+                        <bottom>3</bottom>
+                        <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
+                    </control>
+                </control>
+
+            </focusedlayout>
+
+				
+				
+				
+				
+				
+				
+				
+
+
+                <content>
+                    <item id="1">
+                        <label>14206</label>
+                        <label2>31275</label2>
+                        <icon>special://skin/extras/icons/swissarmy.png</icon>
+                        <onclick>activatewindow(InterfaceSettings)</onclick>
+                    </item>
+
+                    <item id="2">
+                        <label>14202</label>
+                        <label2>31276</label2>
+                        <icon>special://skin/extras/icons/tags.png</icon>
+                        <onclick>activatewindow(MediaSettings)</onclick>
+                    </item>
+                    <item id="3">
+                        <label>14200</label>
+                        <label2>31277</label2>
+                        <icon>special://skin/extras/icons/equalizer.png</icon>
+                        <onclick>activatewindow(PlayerSettings)</onclick>
+                    </item>
+
+                    <item id="12">
+                        <label>20077</label>
+                        <label2>31166</label2>
+                        <icon>special://skin/extras/icons/year.png</icon>
+                        <onclick>activatewindow(SkinSettings)</onclick>
+                    </item>
+                    <item id="8">
+                        <label>13000</label>
+                        <label2>31161</label2>
+                        <icon>special://skin/extras/icons/configure.png</icon>
+                        <onclick>activatewindow(SystemSettings)</onclick>
+                    </item>
+                    <item id="7">
+                        <label>14036</label>
+                        <label2>31164</label2>
+                        <icon>special://skin/extras/icons/network.png</icon>
+                        <onclick>activatewindow(servicesettings)</onclick>
+                    </item>
+
+                    <item id="9">
+                        <label>13200</label>
+                        <label2>31165</label2>
+                        <icon>special://skin/extras/icons/actor.png</icon>
+                        <onclick>activatewindow(Profiles)</onclick>
+                    </item>
+                    <item id="4">
+                        <label>24001</label>
+                        <label2>31162</label2>
+                        <icon>special://skin/extras/icons/addons.png</icon>
+                        <onclick>activatewindow(AddonBrowser)</onclick>
+                    </item>
+
+                    <item id="10">
+                        <label>130</label>
+                        <label2>31167</label2>
+                        <icon>special://skin/extras/icons/sysinfo.png</icon>
+                        <onclick>activatewindow(7)</onclick>
+                    </item>
+                    <item id="11">
+                        <label>19191</label>
+                        <label2>31163</label2>
+                        <icon>special://skin/extras/icons/livetv.png</icon>
+                        <onclick>activatewindow(pvrsettings)</onclick>
+                    </item>
+
+
+                </content>
+            </control>
+
+        </control>
+    </controls>
+
+</window>
